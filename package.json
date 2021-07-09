@@ -1,0 +1,40 @@
+{
+  "name": "n3rgy",
+  "version": "0.1.0",
+  "description": "This library provides convenient access to the n3rgy API form server-side and browser based applications.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "n3rgy",
+    "smart-meter",
+    "smart",
+    "meter",
+    "gas",
+    "electricity",
+    "consumption",
+    "production",
+    "tariff"
+  ],
+  "author": "MySmartMeterData",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "date-fns": "^2.22.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MySmartMeterData/n3rgy-client.git"
+  },
+  "homepage": "https://github.com/MySmartMeterData/n3rgy-client#readme",
+  "bugs": {
+    "url": "https://github.com/MySmartMeterData/n3rgy-client/issues"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "lib": [
+      "es2019",
+      "es7",
+      "es6",
+      "dom"
+    ],
+    "strict": true,
+    "declaration": true,
+    "declarationDir": "./dist",
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+  },
+  "include": [
+    "src/**/*.*"
+  ],
+  "exclude": [
+    "node_modules",
+    "examples"
+  ]
+}
