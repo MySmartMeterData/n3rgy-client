@@ -7,11 +7,13 @@ export class N3rgy extends Request {
    * Constructor
    * @param {String} authToken Test
    * @param {Object} [options] Test
-   * @param {Boolean} [options.offsetConsumptionTimes] Test
+   * @param {Boolean} [options.offsetConsumptionTimestamps] Test
+   * @param {Boolean} [options.offsetTariffTimestamps] Test
    * @param {Number} [options.maxDaysPerRequest] Test
    */
   constructor(authToken: string, options: N3rgyConfigurationOptions = {
     offsetConsumptionTimestamps: false,
+    offsetTariffTimestamps: false,
     maxDaysPerRequest: 90
   }) {
     super({ authToken, options })

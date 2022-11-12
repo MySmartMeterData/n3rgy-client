@@ -16,7 +16,7 @@ export function tariffDataMergeTransform(rawData: N3rgyTariff[], options?: N3rgy
 
         prices: v.prices.map((p: N3rgyPrices) => {
           return {
-            timestamp: n3rgyDateToISODate(p.timestamp),
+            timestamp: offsetTime(n3rgyDateToISODate(p.timestamp), options?.offsetTariffTimestamps),
             value: p.value
           }
         })
@@ -27,12 +27,12 @@ export function tariffDataMergeTransform(rawData: N3rgyTariff[], options?: N3rgy
   return {
     resource: rawData[0].resource,
     responseTimestamp: rawData[0].responseTimestamp,
-    start: n3rgyDateToISODate(rawData[0].start),
-    end: n3rgyDateToISODate(rawData.length > 1 ? rawData[rawData.length - 1].end : rawData[0].end),
+    start: offsetTime(n3rgyDateToISODate(rawData[0].start), options?.offsetTariffTimestamps),
+    end: offsetTime(n3rgyDateToISODate(rawData.length > 1 ? rawData[rawData.length - 1].end : rawData[0].end), options?.offsetTariffTimestamps),
     values,
     availableCacheRange: {
-      start: n3rgyDateToISODate(rawData[0].availableCacheRange.start),
-      end: n3rgyDateToISODate(rawData[0].availableCacheRange.end)
+      start: offsetTime(n3rgyDateToISODate(rawData[0].availableCacheRange.start), options?.offsetConsumptionTimestamps),
+      end: offsetTime(n3rgyDateToISODate(rawData[0].availableCacheRange.end), options?.offsetConsumptionTimestamps)
     },
   }
 }
