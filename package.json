@@ -1,6 +1,6 @@
 {
   "name": "n3rgy",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "This library provides convenient access to the n3rgy API form server-side and browser based applications.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
