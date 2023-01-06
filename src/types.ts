@@ -7,6 +7,7 @@ export interface N3rgyConfiguration {
 
 export interface N3rgyConfigurationOptions {
   offsetConsumptionTimestamps?: boolean
+  offsetTariffTimestamps?: boolean
   maxDaysPerRequest?: number
 }
 
